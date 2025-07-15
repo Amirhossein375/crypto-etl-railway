@@ -17,7 +17,7 @@ def clean_data(raw):
     df['fetched_at'] = pd.Timestamp.now()
     return df
 def save_to_db(df):
-    df.to_sql("crypto_prices", engine, if_exsit = 'append', index = False)
+    df.to_sql("crypto_prices", engine, if_exists = 'append', index = False)
     print("✅ داده‌ها ذخیره شدند")
     
 if __name__ == '__main__':
